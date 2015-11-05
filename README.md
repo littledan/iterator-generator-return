@@ -1,4 +1,4 @@
-# Proposal: Back out .return() from iterators and generators
+# Proposal: Back out `.return()` from iterators and generators
 
 by Daniel Ehrenberg (@littledan)
 
