@@ -99,10 +99,14 @@ The iteration protocol shows up in multiple places in the ES2015 spec, not just 
 
 ## What should be done?
 
+### Revert `.return()` from the ES2016 spec
+
+It's not too late to remove `.return()`. No browser has shipped it yet. Given the lack of motivation and implementation burden that `.return()` has, let's remove it from ES2016.
+
 ### Work out cancellation
 
-### Revert `.return()` from the ES2016 spec
+Promise cancellation is an extremely important feature which informs the design of `async`/`await` and, to the extent that generators continue to parallel async functions, impacts generators. Once we know how cancellation works, it'd help us figure out what we need to add to the language or leave in the language, and we won't need to hold onto guesswork about what might or might not be useful.
 
 ### Go back and add things later if needed
 
-Yes!
+I think it'd be web-compatible to add some forms of resource management on top later. While anyone can, in theory, detect anything with Proxies, TC39's goal isn't absolute backwards-compatibility, but rather web-compatibility. Symbols give us a web-compatible extension point where more methods can be put on existing objects.
