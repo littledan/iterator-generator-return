@@ -14,7 +14,7 @@ I'd argue that both of these features are unnecessary.
 
 ### Generator `.return()` does not provide a basis for promise cancellation
 
-Promise cancellation is more like an exception. It cancellation propagate outward from a cancelled promise, not stop at the function boundary. There's no meaningful 'return value' from a cancelled promise. Cancellation is not something that makes sense to catch and halt and prevent the cancellation from going through. The cancellation needs to go all the way up.
+Promise cancellation is more like an exception. It cancellation propagate outward from a cancelled promise, not stop at the function boundary.
 
 It's not clear whether cancellation will be modelled by a specially tagged exception, a new exception-like abrupt completion, or a .NET-style token that is passed around, but what's clear is that it won't be analogous to generator `.return()`. Everyone I've spoken with who is working on cancellable promises seems to be in agreement about this.
 
