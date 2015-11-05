@@ -63,7 +63,7 @@ change is in terms of what we encourage in our sugary constructs.
 
 ### Generator `.return()` causes additional overhead to all generator usage
 
-With generator `.return()`, all yield statements might return from the generator, depending on how they are used. This basically means an implementation that looks like the above emulation--after every yield, check to see if some sort of `return` flag is set somewhere, and return if so. Even if it's theoretically possible to optimize out, it'll be extremely complicated for implementations to properly deopt on this when appropriate in order to eliminate the conditionals.
+With generator `.return()`, all yield statements might return from the generator, depending on how they are used. This basically means an implementation that looks like the above emulation--after every yield, check to see if some sort of `return` flag is set somewhere, and return if so. Even if it's theoretically possible to optimize out, it'll be pretty complicated to provide a separate IP for 'return' and make it free. The likely outcome for a while is slower generators in many browsers.
 
 ## Why iterators don't need `.return()`
 
