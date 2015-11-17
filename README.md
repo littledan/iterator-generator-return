@@ -2,6 +2,8 @@
 
 by Daniel Ehrenberg (@littledan)
 
+[Summarizing slide deck](https://docs.google.com/presentation/d/13KkqTTz9s2ZZWIF57PWsoQELiYa3Zf150cC9VhqAW60/edit)
+
 ES2015 adds generators and the iteration protocol. One unusual feature in
 ES2015 is the `.return()` method on the iteration protocol, which is supported
 by generators. In the iteration protocol, `.return()` should be called before exiting
